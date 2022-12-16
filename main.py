@@ -24,7 +24,7 @@ class Assistant:
         res = f"Сотрудник: {self.name}\n"
         res += f"Должность: {self.post}\n"
         res += f"Оклад: {self.salary}\n"
-        print(res)
+        return res
 
 
 class Manager(Assistant):
@@ -35,7 +35,7 @@ class Manager(Assistant):
     def add_salary(self, add):
         super().add_salary(add)
         # добавляем боннус
-        self.salary += (self.salary * add)
+        self.salary += self.bonus
         print(f"Сотрудники дали бонус, оклад составил {self.salary}")
 
     def __str__(self):
