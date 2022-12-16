@@ -43,5 +43,6 @@ class Manager(Assistant):
 
 
 ivan_manager = Manager("Иван", "Менеджер", 1700)
-ivan_manager.add_salary(0.335)
 print(ivan_manager)
+ivan_manager.add_salary(0.335)
+
