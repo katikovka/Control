@@ -17,7 +17,7 @@ class Assistant:
         self.name = name
 
     def add_salary(self, add):   # повышение оклада
-        self.salary *= add
+        self.salary += (self.salary * add)
         print(f"Оклад сотрудника {self.name} повышен на 30%, составляет {self.salary}")
 
     def __str__(self):  # метод стр для вывода "Атрибут:объект.атрибут"
@@ -35,7 +35,7 @@ class Manager(Assistant):
     def add_salary(self, add):
         super().add_salary(add)
         # добавляем боннус
-        self.salary += self.bonus
+        self.salary += (self.salary * add)
         print(f"Сотрудники дали бонус, оклад составил {self.salary}")
 
     def __str__(self):
