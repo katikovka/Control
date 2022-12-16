@@ -39,10 +39,11 @@ class Manager(Assistant):
         print(f"Сотрудники дали бонус, оклад составил {self.salary}")
 
     def __str__(self):
-        print(super().__str__()+f"Бонус: {self.bonus}\n")
+        return super().__str__()+f"Бонус: {self.bonus}\n"
 
 
 ivan_manager = Manager("Иван", "Менеджер", 1700)
-print(ivan_manager)
+
 ivan_manager.add_salary(0.335)
 
+print(ivan_manager)
