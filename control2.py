@@ -3,7 +3,7 @@
 date = input()
 
 
-def magic_date():
+def magic_date(date):
     day = int(date.split(".")[0])
     month = int(date.split(".")[1])
     ear = int(date.split(".")[2])
@@ -14,4 +14,4 @@ def magic_date():
         print("Это не магическая дата :(")
 
 
-magic_date()
+magic_date(date)
